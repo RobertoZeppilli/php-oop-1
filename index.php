@@ -4,10 +4,10 @@ require __DIR__ . "/classes/movie.php";
 require __DIR__ . "/data/data.php";
 
 $movies = [
-    $movie1 = new Movie("Strade Perdute", "Noir", $plot1, $urlPoster1, "1990", $actors1, $flag, 9),
-    $movie2 = new Movie("Mulholland Drive", "Noir", $plot2, $urlPoster2, "1992", $actors2, $flag, 8),
-    $movie3 = new Movie("The Square", "Drammatico", $plot3, $urlPoster3, "2017", $actors3, $flag2, 8.5),
-    $movie4 = new Movie("Forza Maggiore", "Drammatico", $plot4, $urlPoster4, "2014", $actors4, $flag2, 8.4)
+    $movie1 = new Movie("Strade Perdute", "Noir", $plot1, $urlPoster1, "1990", $actors1, $flag, 3),
+    $movie2 = new Movie("Mulholland Drive", "Noir", $plot2, $urlPoster2, "1992", $actors2, $flag, 2),
+    $movie3 = new Movie("The Square", "Drammatico", $plot3, $urlPoster3, "2017", $actors3, $flag2, 5),
+    $movie4 = new Movie("Forza Maggiore", "Drammatico", $plot4, $urlPoster4, "2014", $actors4, $flag2, 4)
 ];
 
 ?>
@@ -41,7 +41,7 @@ $movies = [
                                 <small class="actors"><span class="label">Cast </span> <?= $movie->getActors() ?></small> 
                                 <div class="info">
                                     <img class="flag" src="<?= $movie->language ?>" alt="Lingua">
-                                    <small><span class="label">Voto </span> <?= $movie->rating ?></small>
+                                    <small class="stars"><?= $movie->getStars() ?></small>
                                 </div>
                             </div>
                         </div>

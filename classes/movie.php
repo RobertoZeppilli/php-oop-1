@@ -31,5 +31,17 @@ class Movie {
         return implode(", ", $this->actors);
     }
 
+    public function getStars() {
+        $i = 0;
+        while($i < $this->rating) {
+            echo '<i class="fas fa-star"></i>';
+            $i++;
+        }
+        $j = 0;
+        while($j < (5 - $this->rating)) {
+            echo '<i class="far fa-star"></i>';
+            $j++;
+        }
+    }
 }
 
